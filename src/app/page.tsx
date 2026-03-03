@@ -19,9 +19,10 @@ export default function Home() {
           {siteConfig.tagline}
         </p>
         <p className="mt-6 text-base leading-relaxed text-muted">
-          Part builder, part investor. We work alongside founders from the
-          earliest stages — providing capital, strategic guidance, and decades
-          of experience building digital products. Founded and operated by{" "}
+          We believe the best seed stage investor partners are builders
+          themselves. We work alongside founders from the earliest stages —
+          providing capital, strategic guidance, and decades of experience
+          building digital products. Founded and operated by{" "}
           <a
             href="https://www.kellysmith.com"
             target="_blank"

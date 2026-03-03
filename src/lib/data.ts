@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Curious Office",
   tagline: "Seed-stage investing in AI-first companies. Building and investing since 2007.",
   description:
-    "Part builder, part investor. We work alongside founders from the earliest stages — providing capital, strategic guidance, and decades of experience building digital products. Founded and operated by Kelly Smith. Based in Boise, Idaho.",
+    "We believe the best seed stage investor partners are builders themselves. We work alongside founders from the earliest stages — providing capital, strategic guidance, and decades of experience building digital products. Founded and operated by Kelly Smith. Based in Boise, Idaho.",
 };
 
 export const focusAreas = [
@@ -10,6 +10,7 @@ export const focusAreas = [
   "AI-driven Agents & Infrastructure",
   "AI-enabled Healthcare & Biotech",
   "Next-generation Consumer Applications",
+  "Advanced GTM-Engineering (Lead Gen) Pipelines",
 ];
 
 export const ventures = [
