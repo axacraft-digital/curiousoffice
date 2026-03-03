@@ -113,10 +113,11 @@ export default function Home() {
           Approach
         </h2>
         <p className="text-base leading-relaxed text-muted">
-          We work alongside founders daily, not from the sidelines. Strategic
-          guidance, network access, recruiting support, board membership — the
-          work that matters after the check clears. Three decades of building
-          digital products, applied where it counts.
+          Everything works better when you put builders next to builders. We
+          don&apos;t make slide decks or tell founders how to run their company.
+          If we can&apos;t improve the design, the code, or the product
+          directly, we stay out of the way. The best epiphanies happen in the
+          weeds — in the repo, in the prototype, in the actual work.
         </p>
       </section>
 
