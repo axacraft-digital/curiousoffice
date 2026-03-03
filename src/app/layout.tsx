@@ -16,9 +16,28 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "Curious Office — Venture Lab & Early-Stage Studio",
+  metadataBase: new URL("https://curiousoffice.com"),
+  title: "Curious Office — Seed-Stage Investing in AI-First Companies",
   description:
-    "Investment studio and venture lab founded in 2007. Building and investing in intelligent applications, AI infrastructure, and next-generation digital products.",
+    "Seed-stage investing in AI-first companies. Building and investing since 2007. Founded and operated by Kelly Smith.",
+  openGraph: {
+    title: "Curious Office",
+    description:
+      "Seed-stage investing in AI-first companies. Building and investing since 2007.",
+    url: "https://curiousoffice.com",
+    siteName: "Curious Office",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Curious Office",
+    description:
+      "Seed-stage investing in AI-first companies. Building and investing since 2007.",
+  },
+  alternates: {
+    canonical: "https://curiousoffice.com",
+  },
 };
 
 export default function RootLayout({
