@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: "https://curiousoffice.com",
-      lastModified: new Date(),
+      lastModified: new Date("2026-04-10"),
       changeFrequency: "monthly",
       priority: 1,
     },
