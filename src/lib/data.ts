@@ -43,12 +43,12 @@ export const acquisitions = [
   { name: "Elli", acquirer: "The Knot" },
   { name: "Inkd", acquirer: "AlphaGraphics" },
   { name: "Wishpot", acquirer: "Lockerz" },
+  { name: "Moz", acquirer: "Localogy" },
 ];
 
 export const investments = [
   { name: "Bonanza", note: "sold 2023" },
   { name: "Zapd", note: "Apple App of the Week" },
-  { name: "Moz", note: "seed investment" },
   { name: "RealSelf" },
   { name: "Glympse", note: "location sharing" },
   { name: "Rouxbe", note: "online cooking school" },
