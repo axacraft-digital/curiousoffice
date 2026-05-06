@@ -57,7 +57,18 @@ export default function Home() {
         <div className="space-y-6">
           {ventures.map((venture) => (
             <div key={venture.name}>
-              <p className="text-base font-medium">{venture.name}</p>
+              {venture.url ? (
+                <a
+                  href={venture.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base font-medium underline decoration-border underline-offset-4 hover:decoration-foreground"
+                >
+                  {venture.name}
+                </a>
+              ) : (
+                <p className="text-base font-medium">{venture.name}</p>
+              )}
               <p className="mt-1 text-sm leading-relaxed text-muted">
                 {venture.description}
               </p>

@@ -16,19 +16,23 @@ export const focusAreas = [
 export const ventures = [
   {
     name: "Teligant",
+    url: "https://www.teligant.com",
     description: "Advanced telehealth commerce platform",
   },
   {
     name: "Hedfirst",
+    url: "https://www.hedfirst.com",
     description:
       "Telehealth combining licensed providers with AI-driven analysis, labs, and prescriptions",
   },
   {
     name: "Axacraft",
+    url: "https://www.axacraft.com",
     description: "Digital studio, launched 2022. Clients include LG",
   },
   {
     name: "Zeitcore",
+    url: "https://www.zeitcore.com",
     description: "Purpose-built data hub for Shopify Plus merchants",
   },
 ];
