@@ -18,6 +18,7 @@ Curious Office is an investment studio and venture lab founded and operated by K
 - Hedfirst: Telehealth combining licensed providers with AI-driven analysis, labs, and prescriptions
 - Axacraft: Digital studio, launched 2022. Clients include LG
 - Zeitcore: Purpose-built data hub for Shopify Plus merchants
+- Pitform: Operating system for automotive event organizers — registration, check-in, voting, and results
 
 ## Acquisitions
 

@@ -35,6 +35,12 @@ export const ventures = [
     url: "https://www.zeitcore.com",
     description: "Purpose-built data hub for Shopify Plus merchants",
   },
+  {
+    name: "Pitform",
+    url: "https://pitform.com",
+    description:
+      "Operating system for automotive event organizers — registration, check-in, voting, and results",
+  },
 ];
 
 export const acquisitions = [
