@@ -22,7 +22,7 @@ export default function OGImage() {
           style={{
             fontSize: 64,
             fontWeight: 600,
-            color: "#e8e8e8",
+            color: "#ededed",
             letterSpacing: "-0.02em",
             lineHeight: 1.1,
           }}
@@ -34,7 +34,7 @@ export default function OGImage() {
             display: "flex",
             flexDirection: "column",
             fontSize: 28,
-            color: "#666666",
+            color: "#a1a1a1",
             marginTop: 24,
             fontStyle: "italic",
             lineHeight: 1.4,
@@ -46,7 +46,7 @@ export default function OGImage() {
         <div
           style={{
             fontSize: 20,
-            color: "#444444",
+            color: "#8f8f8f",
             marginTop: 48,
             letterSpacing: "0.05em",
             textTransform: "uppercase" as const,

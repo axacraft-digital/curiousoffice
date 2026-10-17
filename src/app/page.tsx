@@ -6,6 +6,31 @@ import {
   investments,
   contact,
 } from "@/lib/data";
+import { LocalTime } from "./local-time";
+
+const link =
+  "underline decoration-line underline-offset-4 transition-colors hover:decoration-foreground";
+
+function SectionLabel({ index, children }: { index: string; children: string }) {
+  return (
+    <h2 className="mb-8 flex items-center gap-4 text-xs font-medium uppercase tracking-widest text-subtle">
+      <span className="tabular-nums">{index}</span>
+      <span>{children}</span>
+      <span aria-hidden className="h-px flex-1 bg-border" />
+    </h2>
+  );
+}
+
+function Arrow() {
+  return (
+    <span
+      aria-hidden
+      className="ml-1 inline-block text-subtle transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground"
+    >
+      &#8599;
+    </span>
+  );
+}
 
 export default function Home() {
   return (
@@ -15,7 +40,7 @@ export default function Home() {
         <h1 className="font-serif text-2xl sm:text-3xl tracking-tight">
           {siteConfig.name}
         </h1>
-        <p className="mt-4 font-serif text-lg sm:text-xl italic text-muted">
+        <p className="mt-4 font-serif text-lg sm:text-xl italic text-muted text-balance">
           {siteConfig.tagline}
         </p>
         <p className="mt-6 text-base leading-relaxed text-muted">
@@ -27,7 +52,7 @@ export default function Home() {
             href="https://www.kellysmith.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline decoration-border underline-offset-4 hover:decoration-foreground text-foreground"
+            className={`${link} text-foreground`}
           >
             Kelly Smith
           </a>
@@ -37,9 +62,7 @@ export default function Home() {
 
       {/* Focus */}
       <section className="mb-24 sm:mb-32">
-        <h2 className="mb-8 text-xs font-medium uppercase tracking-widest text-muted">
-          Current Focus
-        </h2>
+        <SectionLabel index="01">Current Focus</SectionLabel>
         <ul className="space-y-2">
           {focusAreas.map((area) => (
             <li key={area} className="text-base">
@@ -51,9 +74,7 @@ export default function Home() {
 
       {/* Ventures */}
       <section className="mb-24 sm:mb-32">
-        <h2 className="mb-8 text-xs font-medium uppercase tracking-widest text-muted">
-          Current Ventures
-        </h2>
+        <SectionLabel index="02">Current Ventures</SectionLabel>
         <div className="space-y-6">
           {ventures.map((venture) => (
             <div key={venture.name}>
@@ -62,47 +83,59 @@ export default function Home() {
                   href={venture.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base font-medium underline decoration-border underline-offset-4 hover:decoration-foreground"
+                  className="group block"
                 >
-                  {venture.name}
+                  <span className="text-base font-medium underline decoration-line underline-offset-4 transition-colors group-hover:decoration-foreground">
+                    {venture.name}
+                  </span>
+                  <Arrow />
+                  <span className="mt-1 block text-sm leading-relaxed text-muted transition-colors group-hover:text-foreground">
+                    {venture.description}
+                  </span>
                 </a>
               ) : (
-                <p className="text-base font-medium">{venture.name}</p>
+                <>
+                  <p className="text-base font-medium">{venture.name}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-muted">
+                    {venture.description}
+                  </p>
+                </>
               )}
-              <p className="mt-1 text-sm leading-relaxed text-muted">
-                {venture.description}
-              </p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Portfolio — Acquisitions */}
-      <section className="mb-16 sm:mb-20">
-        <h2 className="mb-6 font-serif text-lg sm:text-xl tracking-tight">
+      {/* Portfolio */}
+      <section className="mb-24 sm:mb-32">
+        <SectionLabel index="03">Portfolio</SectionLabel>
+
+        <h3 className="mb-4 font-serif text-lg sm:text-xl tracking-tight">
           Acquisitions
-        </h2>
-        <div className="divide-y divide-border">
+        </h3>
+        <div className="mb-16 divide-y divide-border sm:mb-20">
           {acquisitions.map((company) => (
             <div
               key={company.name}
               className="flex items-baseline justify-between gap-4 py-2.5"
             >
               <span className="text-sm">{company.name}</span>
-              <span className="text-sm text-muted">
+              <span className="font-serif text-[15px] italic text-muted">
                 {company.acquirer}
-                {company.year && `, ${company.year}`}
+                {company.year && (
+                  <span className="not-italic font-sans text-sm tabular-nums text-subtle">
+                    {" "}
+                    {company.year}
+                  </span>
+                )}
               </span>
             </div>
           ))}
         </div>
-      </section>
 
-      {/* Portfolio — Investments */}
-      <section className="mb-24 sm:mb-32">
-        <h2 className="mb-6 font-serif text-lg sm:text-xl tracking-tight">
+        <h3 className="mb-4 font-serif text-lg sm:text-xl tracking-tight">
           Investments
-        </h2>
+        </h3>
         <div className="divide-y divide-border">
           {investments.map((company) => (
             <div
@@ -111,7 +144,9 @@ export default function Home() {
             >
               <span className="text-sm">{company.name}</span>
               {company.note && (
-                <span className="text-sm text-muted">{company.note}</span>
+                <span className="text-right text-sm text-muted">
+                  {company.note}
+                </span>
               )}
             </div>
           ))}
@@ -120,42 +155,38 @@ export default function Home() {
 
       {/* Approach */}
       <section className="mb-24 sm:mb-32">
-        <h2 className="mb-8 text-xs font-medium uppercase tracking-widest text-muted">
-          Approach
-        </h2>
+        <SectionLabel index="04">Approach</SectionLabel>
         <p className="text-base leading-relaxed text-muted">
           Everything works better when you put builders next to builders. We
           don&apos;t make slide decks or tell founders how to run their company.
           If we can&apos;t improve the design, the code, or the product
-          directly, we stay out of the way. The best epiphanies happen in the
-          weeds — in the repo, in the prototype, in the actual work.
+          directly, we stay out of the way.{" "}
+          <span className="font-serif text-[17px] italic text-foreground">
+            The best epiphanies happen in the weeds — in the repo, in the
+            prototype, in the actual work.
+          </span>
         </p>
       </section>
 
       {/* Connect */}
       <section className="mb-24 sm:mb-32">
-        <h2 className="mb-8 text-xs font-medium uppercase tracking-widest text-muted">
-          Connect
-        </h2>
+        <SectionLabel index="05">Connect</SectionLabel>
         <div className="space-y-2 text-base">
           <p>
-            <a
-              href={`mailto:${contact.email}`}
-              className="underline decoration-border underline-offset-4 hover:decoration-foreground"
-            >
+            <a href={`mailto:${contact.email}`} className={link}>
               {contact.email}
             </a>
           </p>
-          {contact.links.map((link) => (
-            <p key={link.label}>
+          {contact.links.map((item) => (
+            <p key={item.label}>
               <a
-                href={link.href}
+                href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline decoration-border underline-offset-4 hover:decoration-foreground"
+                className={`group ${link}`}
               >
-                {link.label}
-                <span className="ml-1 text-muted">&#8599;</span>
+                {item.label}
+                <Arrow />
               </a>
             </p>
           ))}
@@ -163,8 +194,11 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="text-xs text-muted">
-        <p>&copy; 2026 Curious Office</p>
+      <footer className="text-xs text-subtle">
+        <p>
+          &copy; 2026 Curious Office<span aria-hidden> · </span>Boise, Idaho
+          <LocalTime />
+        </p>
       </footer>
     </main>
   );

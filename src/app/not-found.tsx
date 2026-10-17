@@ -7,11 +7,11 @@ export default function NotFound() {
         Page not found
       </h1>
       <p className="mt-4 text-base text-muted">
-        The page you're looking for doesn't exist or has been moved.
+        The page you&rsquo;re looking for doesn&rsquo;t exist or has been moved.
       </p>
       <Link
         href="/"
-        className="mt-8 text-base underline decoration-border underline-offset-4 hover:decoration-foreground"
+        className="mt-8 text-base underline decoration-line underline-offset-4 hover:decoration-foreground"
       >
         Back to Curious Office
       </Link>
