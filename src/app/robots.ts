@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://curiousoffice.com/sitemap.xml",
+    sitemap: "https://www.curiousoffice.com/sitemap.xml",
   };
 }

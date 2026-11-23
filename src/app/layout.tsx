@@ -17,7 +17,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://curiousoffice.com"),
+  metadataBase: new URL("https://www.curiousoffice.com"),
   title: "Curious Office — Seed-Stage Investing in AI-First Companies",
   description:
     "Seed-stage investing in AI-first companies. Building and investing since 2007. Founded and operated by Kelly Smith.",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Curious Office",
     description:
       "Seed-stage investing in AI-first companies. Building and investing since 2007.",
-    url: "https://curiousoffice.com",
+    url: "https://www.curiousoffice.com",
     siteName: "Curious Office",
     locale: "en_US",
     type: "website",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       "Seed-stage investing in AI-first companies. Building and investing since 2007.",
   },
   alternates: {
-    canonical: "https://curiousoffice.com",
+    canonical: "https://www.curiousoffice.com",
   },
   other: {
     "theme-color": "#111111",
@@ -52,14 +52,14 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://curiousoffice.com/#organization",
+    "@id": "https://www.curiousoffice.com/#organization",
     name: "Curious Office",
-    url: "https://curiousoffice.com",
+    url: "https://www.curiousoffice.com",
     description:
       "Seed-stage investing in AI-first companies. Building and investing since 2007.",
     foundingDate: "2007",
     founder: {
-      "@id": "https://kellysmith.com/#person",
+      "@id": "https://www.kellysmith.com/#person",
     },
     subOrganization: {
       "@id": "https://www.axacraft.com/#organization",
