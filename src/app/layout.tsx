@@ -52,31 +52,27 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://curiousoffice.com/#organization",
     name: "Curious Office",
     url: "https://curiousoffice.com",
     description:
       "Seed-stage investing in AI-first companies. Building and investing since 2007.",
     foundingDate: "2007",
     founder: {
-      "@type": "Person",
-      name: "Kelly Smith",
-      url: "https://www.kellysmith.com",
-      sameAs: [
-        "https://www.linkedin.com/in/kellysmith",
-        "https://www.instagram.com/curiousoffice",
-      ],
+      "@id": "https://kellysmith.com/#person",
+    },
+    subOrganization: {
+      "@id": "https://www.axacraft.com/#organization",
     },
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Boise",
+      addressLocality: "Meridian",
       addressRegion: "ID",
       addressCountry: "US",
     },
-    sameAs: [
-      "https://www.linkedin.com/in/kellysmith",
-      "https://www.instagram.com/curiousoffice",
-    ],
+    sameAs: ["https://www.linkedin.com/company/curious-office"],
   };
+
 
   return (
     <html lang="en">
