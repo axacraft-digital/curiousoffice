@@ -56,7 +56,7 @@ export default function Home() {
           >
             Kelly Smith
           </a>
-          . Based in Boise, Idaho.
+          . Based in Meridian, Idaho.
         </p>
       </header>
 
@@ -196,7 +196,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="text-xs text-subtle">
         <p>
-          &copy; 2026 Curious Office<span aria-hidden> · </span>Boise, Idaho
+          &copy; 2026 Curious Office<span aria-hidden> · </span>Meridian, Idaho
           <LocalTime />
         </p>
       </footer>
